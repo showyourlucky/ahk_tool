@@ -1,12 +1,14 @@
 # AHK小工具
 
-## 简单ai处理文本工具
+## [简单ai处理文本工具-aiText](https://github.com/showyourlucky/ahk_tool/tree/main/aiText)
+
+
 
 - zzz_AiText.ahk是根据translator.ahk修改的ranany插件
 
 ### translator使用方法
 
-1. 启动translator.exe
+1. 启动[translator.exe](https://github.com/showyourlucky/ahk_tool/blob/main/aiText/translator.exe)
 
 2. 填写api设置
 
@@ -20,7 +22,7 @@
 
 ### zzz_AiText使用方法
 
-1. 进入RunAny安装目录下的RunPlugins, 比如D:\RunAny\RunPlugins
+1. 进入[RunAny](https://github.com/hui-Zz/RunAny)安装目录下的RunPlugins, 比如D:\RunAny\RunPlugins
 
 2. 新建目录zzz_AiText, 把zzz_AiText.ahk放入zzz_AiText目录中
 
