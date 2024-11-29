@@ -27,6 +27,11 @@
 3. 在RunAny插件管理中设置自启并且启动zzz_AiText.ahk
 
    ![image-20241129225304826](readme.assets/设置自启.png)
+   
+4. 在runAny配置中加入配置, 注意“ai翻译”为菜单名, 不要与其它菜单重复, “翻译”prompt中设置的prompt
+ ```
+ ai翻译|zzz_AiText[dotask](%getZz%,翻译)
+ ```
 
 ![主界面](readme.assets/主界面.png)
 
