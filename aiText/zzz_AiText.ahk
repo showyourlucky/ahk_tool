@@ -186,7 +186,10 @@ LoadConfig() {
 
 setSendData(selectedModel, sysPrompt, userPrompt){
     ; theSysPrompt := RegExReplace(sysPrompt, "\r\n|\n|\r", "\n")
-    theUserPrompt := RegExReplace(userPrompt, "\r\n|\n|\r", "\n")
+    ; 转义特殊字符
+    theUserPrompt := RegExReplace(theUserPrompt, "\\", "\\\\")     ; 转义反斜杠, 必须放在开头
+    theUserPrompt := RegExReplace(userPrompt, "\r\n|\n|\r", "\n")  ; 处理换行符
+    theUserPrompt := RegExReplace(theUserPrompt, """", "\""")  
     sendData := "
     (
         {
@@ -232,6 +235,7 @@ sendRequest(sysPrompt, userPrompt){
 ; HTTP请求函数
 HttpGet(url, token) {
     whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+    whr.SetTimeouts(30000, 30000, 30000, 1200000)
     whr.Open("GET", url, true)
     whr.SetRequestHeader("Authorization", "Bearer " token)
     whr.Send()
@@ -243,6 +247,8 @@ HttpPost(url, token, sendData) {
     ToolTip, AI请求中
     try {
         whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+        ; 设置超时时间(毫秒): 解析域名超时, 连接超时, 发送超时, 接收超时
+        whr.SetTimeouts(30000, 30000, 30000, 1200000)
         whr.Open("POST", url, true)
         whr.SetRequestHeader("Authorization", "Bearer " token)
         whr.SetRequestHeader("Content-Type", "application/json")
