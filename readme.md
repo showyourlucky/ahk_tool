@@ -28,11 +28,13 @@
 
    ![image-20241129225304826](readme.assets/设置自启.png)
    
-4. 在runAny配置中加入配置, 注意“ai翻译”为菜单名, 不要与其它菜单重复, “翻译”prompt中设置的prompt
- ```
- ai翻译|zzz_AiText[dotask](%getZz%,翻译)
- ```
+4. 在runAny.ini配置中加入配置, 注意“ai翻译”为菜单名, 不要与其它菜单重复, “翻译”prompt中设置的prompt; 也可以在菜单中进行配置
+   ```
+   ai翻译|zzz_AiText[dotask](%getZz%,翻译)
+   ```
+    ![image-20241129233110248](readme.assets/image-20241129233110248.png)
 
+### 主界面
 ![主界面](readme.assets/主界面.png)
 
 - 可设置api, 只支持openai格式
