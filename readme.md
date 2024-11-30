@@ -12,14 +12,16 @@
 
 2. 填写api设置
 
-3. 选中prompt提示词
+3. 填入要处理的文本
 
-4. 点击发送
+4. 选择prompt提示词再点击发送或者**直接点击**下一行的按钮, 如翻译
 
-   发送按钮使用选择的prompt提示词
+5. 其它说明
+   - 发送按钮使用的prompt是prompt按钮中选择的提示词, 翻译按钮使用的prompt内置, 如果不满意, 请自己新增翻译的prompt
 
-   除翻译按钮外, 翻译右侧按钮由其它的prompt生成, 最多生成3个按钮
-
+   - 除翻译按钮外, 翻译右侧按钮由其它的prompt生成, 最多生成3个按钮
+  
+   - translator依赖JSON.ahk, 需要放到translator的同一目录下
 ### zzz_AiText使用方法
 
 1. 进入[RunAny](https://github.com/hui-Zz/RunAny)安装目录下的RunPlugins, 比如D:\RunAny\RunPlugins
